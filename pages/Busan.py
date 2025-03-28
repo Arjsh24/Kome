@@ -34,7 +34,7 @@ def tabs(tabnum, name, googlelink, intro, image1, image2, data, pos, neg, image3
         with col1:
             st.markdown('**Image**')
             st.image(image1,
-                     use_column_width=True)
+                     use_container_width=True)
 
         with col2:
             st.markdown('**You may also like 😃**')

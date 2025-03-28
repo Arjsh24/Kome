@@ -44,7 +44,7 @@ def tabs(tabnum, name, googlelink, intro, image1, image2, data, pos, neg, image3
                 tile = col.expander(rec_place[i])
                 tile.image(rec_place_img[i],
                      caption=rec_caption[i],
-                     use_column_width=True)
+                     use_container_width=True)
 
         st.divider()
 
@@ -54,7 +54,7 @@ def tabs(tabnum, name, googlelink, intro, image1, image2, data, pos, neg, image3
             st.markdown('💡**Highlights of the Destination**')
             st.text('(Top Keywords based on Korean blog)')
             st.image(image2,
-                     use_column_width=True)
+                     use_container_width=True)
         with col2:
             data1 = pd.read_csv(data)
             data1[['Year', 'Month', 'Day']] = data1['날짜'].str.rstrip('.').str.split('.', expand=True)
@@ -101,7 +101,7 @@ def tabs(tabnum, name, googlelink, intro, image1, image2, data, pos, neg, image3
         st.subheader(f'**:green[{positive_display}]** **:red[{negative_display}]**')
 
         with st.expander('Review text positive/negative word distribution (Bigram NetworkX Graph)'):
-            st.image(image3, use_column_width=True)
+            st.image(image3, use_container_width=True)
 
 # --------------------------(광안리해수욕장)-------------------------
 
